@@ -1,0 +1,29 @@
+ALGORITHM text_analyze
+VAR
+    str : STRING := '';
+    nb_char : INTEGER := 0;
+    nb_word : INTEGER := 0;
+    nb_vow : INTEGER := 0;
+    i : INTEGER := 0;BEGIN
+
+    write("Please enter a sentence ends by .");
+    read(str);
+
+
+    WHILE (str[i] <> '.') DO
+        
+        nb_char := nb_char +1;
+        IF (str[i] = 'a' OR str[i]='e' OR str[i]='i' OR str[i]='o' OR str[i]='u' OR str[i]='y') THEN
+            nb_vow := nb_vow +1;
+        END_IF
+
+        IF (str[i]=' ') THEN
+            nb_word := nb_word +1;
+        END_IF
+        i:=i+1;
+    END_WHILE
+
+    Write("The length of the sentence is ",nb_char);
+    Write("The number of words in the sentence is ",nb_word);
+    Write("he number of vowels in the sentence. is ",nb_vow);
+END

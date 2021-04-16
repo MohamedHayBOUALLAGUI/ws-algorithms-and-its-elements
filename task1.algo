@@ -1,0 +1,26 @@
+ALGORITHM Permutation
+VAR
+    x,y,z,aux : INTEGER;
+BEGIN
+//inputs
+    Write('entrer x');
+    Read(x);
+     Write('entrer y');
+    Read(y);
+    Write('entrer z');
+    Read(z);
+//messages des inputs before permutations
+    Write("Before permutation: => x=",x);
+    Write("Before permutation: => y=",y);
+    Write("Before permutation: => z=",z);
+//instructions pour permutation
+    aux:=x;
+    x:=y;
+    y:=z;
+    z:=aux  
+    //messages après permutations
+    Write("After permutation: => x=",x);
+    Write("After permutation: => y=",y);
+    Write("After permutation: => z=",z);  
+
+END
